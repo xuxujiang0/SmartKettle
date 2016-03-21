@@ -3,7 +3,48 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2013
 VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Reference", "01 Reference", "{533B125A-3B9F-4BCC-A817-252F8F66E95C}"
+	ProjectSection(SolutionItems) = preProject
+		01 Reference\Newtonsoft.Json.dll = 01 Reference\Newtonsoft.Json.dll
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartKettle.Models", "SmartKettle.Models\SmartKettle.Models.csproj", "{BEB30893-6506-4A19-B373-74CFCDD0EE0F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartKettle.Common", "SmartKettle.Common\SmartKettle.Common.csproj", "{14EE8607-8B34-405D-8383-3FD3DEB1549D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartKettle.Interfaces", "SmartKettle.Interfaces\SmartKettle.Interfaces.csproj", "{EDACA9DE-CC32-4853-82B5-A7251E2A5C6A}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartKettle.BLL", "SmartKettle.BLL\SmartKettle.BLL.csproj", "{00C817CA-13D9-497B-98F2-0312FAA3B780}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SmartKettle.WebAPI", "SmartKettle.WebAPI\SmartKettle.WebAPI.csproj", "{5318CE29-3192-417E-9B6F-0A629B341D22}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{BEB30893-6506-4A19-B373-74CFCDD0EE0F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BEB30893-6506-4A19-B373-74CFCDD0EE0F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BEB30893-6506-4A19-B373-74CFCDD0EE0F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BEB30893-6506-4A19-B373-74CFCDD0EE0F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{14EE8607-8B34-405D-8383-3FD3DEB1549D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{14EE8607-8B34-405D-8383-3FD3DEB1549D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{14EE8607-8B34-405D-8383-3FD3DEB1549D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{14EE8607-8B34-405D-8383-3FD3DEB1549D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EDACA9DE-CC32-4853-82B5-A7251E2A5C6A}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EDACA9DE-CC32-4853-82B5-A7251E2A5C6A}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EDACA9DE-CC32-4853-82B5-A7251E2A5C6A}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EDACA9DE-CC32-4853-82B5-A7251E2A5C6A}.Release|Any CPU.Build.0 = Release|Any CPU
+		{00C817CA-13D9-497B-98F2-0312FAA3B780}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{00C817CA-13D9-497B-98F2-0312FAA3B780}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{00C817CA-13D9-497B-98F2-0312FAA3B780}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{00C817CA-13D9-497B-98F2-0312FAA3B780}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5318CE29-3192-417E-9B6F-0A629B341D22}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5318CE29-3192-417E-9B6F-0A629B341D22}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5318CE29-3192-417E-9B6F-0A629B341D22}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5318CE29-3192-417E-9B6F-0A629B341D22}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
