@@ -11,7 +11,7 @@ namespace SmartKettle.WebAPI.Controllers
 {
     public class HomeController : ApiController
     {
-        [HttpPost]
+        [HttpGet]
         public HttpResponseMessage Login(string account, string password)
         {
             ApiResult<bool> apiResult = new ApiResult<bool> { code = ResultCode.CODE_SUCCESS};
