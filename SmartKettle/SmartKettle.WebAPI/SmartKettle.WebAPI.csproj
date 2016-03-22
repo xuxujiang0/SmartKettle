@@ -39,6 +39,10 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MySql.Data, Version=6.6.5.0, Culture=neutral, PublicKeyToken=c5687fc88969c44d, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\01 Reference\MySql.Data.dll</HintPath>
+    </Reference>
     <Reference Include="System.Net.Http" />
     <Reference Include="System.Web.DynamicData" />
     <Reference Include="System.Web.Entity" />
@@ -97,9 +101,17 @@
     <Folder Include="Models\" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\SmartKettle.BLL\SmartKettle.BLL.csproj">
+      <Project>{00c817ca-13d9-497b-98f2-0312faa3b780}</Project>
+      <Name>SmartKettle.BLL</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SmartKettle.Common\SmartKettle.Common.csproj">
       <Project>{14ee8607-8b34-405d-8383-3fd3deb1549d}</Project>
       <Name>SmartKettle.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartKettle.Interfaces\SmartKettle.Interfaces.csproj">
+      <Project>{edaca9de-cc32-4853-82b5-a7251e2a5c6a}</Project>
+      <Name>SmartKettle.Interfaces</Name>
     </ProjectReference>
     <ProjectReference Include="..\SmartKettle.Models\SmartKettle.Models.csproj">
       <Project>{beb30893-6506-4a19-b373-74cfcdd0ee0f}</Project>
