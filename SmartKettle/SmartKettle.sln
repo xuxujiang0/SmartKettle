@@ -5,6 +5,7 @@ VisualStudioVersion = 12.0.21005.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "01 Reference", "01 Reference", "{533B125A-3B9F-4BCC-A817-252F8F66E95C}"
 	ProjectSection(SolutionItems) = preProject
+		01 Reference\MySql.Data.dll = 01 Reference\MySql.Data.dll
 		01 Reference\Newtonsoft.Json.dll = 01 Reference\Newtonsoft.Json.dll
 	EndProjectSection
 EndProject
