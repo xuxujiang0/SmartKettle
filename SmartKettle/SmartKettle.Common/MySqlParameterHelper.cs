@@ -2,6 +2,7 @@
 using System;
 using System.Collections.Generic;
 using System.Linq;
+using System.Reflection;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -9,6 +10,39 @@ namespace SmartKettle.Common
 {
     public class MySqlParameterHelper
     {
+        public static List<MySqlParameter> GetMySqlParameter<T>(T model)
+        {
+            List<MySqlParameter> param = new List<MySqlParameter>();
+            Type objType = model.GetType();
+            FieldInfo[] minfos = objType.GetFields();
+            foreach (FieldInfo item in minfos)
+            {
+                MySqlDbType tt = MySqlDbType.Int32;
+                switch (item.FieldType.FullName)
+                {
+                    case "System.Int32":
+                        tt = MySqlDbType.Int32;
+                        break;
+                    case "System.String":
+                        tt = MySqlDbType.VarChar;
+                        break;
+                    case "System.DateTime":
+                        tt = MySqlDbType.DateTime;
+                        break;
+                    case "System.Boolean":
+                        tt = MySqlDbType.Bit;
+                        break;
+                    case "System.Single":
+                        tt = MySqlDbType.Float;
+                        break;
+                    case "System.Double":
+                        tt = MySqlDbType.Double;
+                        break;
+                }
+                param.Add(new MySqlParameter { ParameterName = string.Format("?{0}", item.Name), Value = item.GetValue(model), MySqlDbType = tt });
+            }
+            return param;
+        }
         public static List<MySqlParameter> GetMySqlParameter(Dictionary<string, object> paramDicList)
         {
             List<MySqlParameter> param = new List<MySqlParameter>();
