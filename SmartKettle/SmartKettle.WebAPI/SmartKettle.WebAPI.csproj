@@ -77,6 +77,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Global.asax" />
+    <Content Include="sql\SmartKettle_dev.sql" />
     <Content Include="Web.config" />
   </ItemGroup>
   <ItemGroup>
@@ -108,6 +109,10 @@
     <ProjectReference Include="..\SmartKettle.Common\SmartKettle.Common.csproj">
       <Project>{14ee8607-8b34-405d-8383-3fd3deb1549d}</Project>
       <Name>SmartKettle.Common</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\SmartKettle.Factory\SmartKettle.Factory.csproj">
+      <Project>{8b3a4709-78ee-48af-9457-8c9e26a499a3}</Project>
+      <Name>SmartKettle.Factory</Name>
     </ProjectReference>
     <ProjectReference Include="..\SmartKettle.Interfaces\SmartKettle.Interfaces.csproj">
       <Project>{edaca9de-cc32-4853-82b5-a7251e2a5c6a}</Project>

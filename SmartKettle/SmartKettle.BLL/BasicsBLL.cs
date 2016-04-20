@@ -11,9 +11,6 @@ namespace SmartKettle.BLL
 {
     public class BasicsBLL : IBasicsBLL
     {
-        #region --- 单例 ---
-        public readonly static BasicsBLL _Current = new BasicsBLL();
-        #endregion
 
         public int ExecuteNonQuery(string sqlText, System.Data.CommandType cmdType, MySql.Data.MySqlClient.MySqlParameter sqlParam)
         {

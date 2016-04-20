@@ -10,19 +10,21 @@ using System.Linq;
 using System.Net;
 using System.Net.Http;
 using System.Web.Http;
+using SmartKettle.Factory;
+using SmartKettle.Interfaces.IBLL;
 
 namespace SmartKettle.WebAPI.Controllers
 {
     public class HomeController : ApiController
     {
-        [HttpGet]
-        public HttpResponseMessage Login()
-        {
-            ApiResult<bool> apiResult = new ApiResult<bool> { code = ResultCode.CODE_SUCCESS };
+        //[HttpGet]
+        //public HttpResponseMessage Login()
+        //{
+        //    ApiResult<bool> apiResult = new ApiResult<bool> { code = ResultCode.CODE_SUCCESS };
 
 
-            return JsonHelper.SerializeObjectToWebApi(apiResult);
-        }
+        //    return JsonHelper.SerializeObjectToWebApi(apiResult);
+        //}
         [HttpGet]
         public void test()
         {
@@ -37,7 +39,8 @@ namespace SmartKettle.WebAPI.Controllers
                 TB_MemberInfo info = new TB_MemberInfo() { Account = "xuxujiang0", Passwd = "xuxujiang0", Name = "徐大师", Age = 18, CreationDate = DateTime.Now, CreationUser = "xuxujiang0" };
                 List<MySqlParameter> paramList = MySqlParameterHelper.GetMySqlParameter<TB_MemberInfo>(info);
                 string sqlText = "INSERT INTO tb_memberinfo(`Account`,`Passwd`,`CreationUser`,`CreationDate`) VALUE(?Account,?Passwd,?CreationUser,?CreationDate)";
-                int result = BasicsBLL._Current.ExecuteNonQuery(sqlText, CommandType.Text, paramList.ToArray());
+                IBasicsBLL model = Factory.Factory.CreateInstall<BasicsBLL, IBasicsBLL>();
+                 int result = model.ExecuteNonQuery(sqlText, CommandType.Text, paramList.ToArray());
             }
             catch (Exception ex)
             {
