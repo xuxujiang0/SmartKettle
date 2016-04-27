@@ -44,7 +44,7 @@ namespace SmartKettle.WebAPI.Controllers
             }
             catch (Exception ex)
             {
-
+                throw ex;
             }
         }
     }
